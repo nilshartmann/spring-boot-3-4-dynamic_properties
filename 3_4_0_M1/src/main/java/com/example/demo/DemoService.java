@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service;
 public class DemoService {
 
     final String demoTestProp;
-    DemoService(@Value("${demo.test.prop}") String demoTestProp) {
+
+    DemoService(DummyService dummyService, @Value("${demo.test.prop}") String demoTestProp) {
 
         this.demoTestProp = demoTestProp;
     }
